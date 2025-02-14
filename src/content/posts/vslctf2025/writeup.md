@@ -14,18 +14,17 @@ I solved 6/7 web challeges in this ctf. Here is my writeup
 
 ## Web 1: Beginner web:
 
-![image](https://hackmd.io/_uploads/HJNihgWPke.png)
+![Screenshot 2025-01-12 152617](https://github.com/user-attachments/assets/2aa767d6-a000-4683-b958-31903f89e105)
 
 Let try f12
 
-![Screenshot 2025-01-12 153001](https://hackmd.io/_uploads/Bkjq6xZvJe.png)
+![Screenshot 2025-01-12 152929](https://github.com/user-attachments/assets/6435e801-c363-4fc3-bdea-b8aad8731bc1)
 
 We have part 1 of flag: `VSL{n0w_4l`
 
 Then, in this type of chall, I guess we should search `robots.txt`, right. 
 
-![image](https://hackmd.io/_uploads/rJwH0eZv1g.png)
-
+![Screenshot 2025-01-12 153315](https://github.com/user-attachments/assets/998cc12e-40dd-44a5-aa81-1b9753540fd6)
 
 We have a hidden endpoint and part 2 of flag
 
@@ -33,13 +32,13 @@ Part 2: `l_w3_n33d_`
 
 Then we access this enpoint: `/bumblebee-secret.txt`:
 
-![image](https://hackmd.io/_uploads/ryx2Rlbvkx.png)
+![Screenshot 2025-01-12 153500](https://github.com/user-attachments/assets/7794b76a-79ae-4f99-8267-78bd6bae9c3b)
 
 Part 3: 15_4_l1ttl
 
 Use `proxy` in burp suite:
 
-![image](https://hackmd.io/_uploads/By5ry-Wvke.png)
+![Screenshot 2025-01-12 153712](https://github.com/user-attachments/assets/4f5b5eea-a59c-40a6-a36a-8c9b5de6ce29)
 
 Part 4: `3_3nerg0n_`
 
@@ -47,11 +46,11 @@ Part 5: `4nd_4_l0t_`
 
 It's too long bro, time to final part. Here is the hint:
 
-![image](https://hackmd.io/_uploads/Bkk5k-WPye.png)
+![Screenshot 2025-01-12 153844](https://github.com/user-attachments/assets/0102a85c-0842-4e9d-b91d-00f3e7f94779)
 
 Add parameter to get flag:
 
-![image](https://hackmd.io/_uploads/B183kWZvyx.png)
+![Screenshot 2025-01-12 153923](https://github.com/user-attachments/assets/bf9105d5-aee5-443f-aaf8-ac46a93ce6a2)
 
 Part 6: `0f_1uck!!}`
 
@@ -115,19 +114,18 @@ Time to solve here
 
 At first, access `/register` and register a account:
 
-![Screenshot 2025-01-12 162310](https://hackmd.io/_uploads/Sy3eob-Pkx.png)
+![Screenshot 2025-01-12 162651](https://github.com/user-attachments/assets/259918d4-e7ee-4051-9e55-4fbd0a3dd108)
 
 Then, access `/recover` and do like this:
 
-![Screenshot 2025-01-12 162900](https://hackmd.io/_uploads/rk7Dsbbvyg.png)
+![Screenshot 2025-01-12 162900](https://github.com/user-attachments/assets/b3bf5047-1110-4546-8100-9e9ab86ab8d1)
 
 We have admin password:
 
-![Screenshot 2025-01-12 162906](https://hackmd.io/_uploads/Hy7do-Wv1e.png)
+![Screenshot 2025-01-12 162906](https://github.com/user-attachments/assets/643cb91b-b3f5-4413-918f-0bfd551679b6)
 
 Now, easy flag :v :
 
-![image](https://hackmd.io/_uploads/SJijiZWDkx.png)
 
 ### Flag: 
 `
@@ -135,7 +133,8 @@ VSL{92c08fbf74030efcad16559dc8cc6c39}
 `
 
 ## Web 3: Codegate:
-![image](https://hackmd.io/_uploads/SJl8h--PJe.png)
+
+![Screenshot 2025-01-12 163255](https://github.com/user-attachments/assets/593893a2-b47c-4574-87a5-3ff41c291cc3)
 
 Scan the source, we have a very long filter:
 
@@ -281,11 +280,12 @@ content = pathlib.Path('/app/flag.txt').read_text()
 print(content)
 ```
 
-![image](https://hackmd.io/_uploads/H1uGpbWwyl.png)
+![Screenshot 2025-01-12 163624](https://github.com/user-attachments/assets/92dbd4b7-54b6-4023-af40-742d4b4fff12)
 
 Then, flag:
 
-![image](https://hackmd.io/_uploads/HkTmTbZP1x.png)
+![Screenshot 2025-01-12 163648](https://github.com/user-attachments/assets/20734dbd-74c7-4eed-b58c-44bbe469186f)
+
 
 ### Flag: 
 `
@@ -294,7 +294,7 @@ VSL{all0w_3sc4p3_1s_fun_hehe_00e0dcbd5!}
 
 ## Web 4: UserPortal
 
-![image](https://hackmd.io/_uploads/HyUc6-Wwyg.png)
+![Screenshot 2025-01-12 163819](https://github.com/user-attachments/assets/7872930c-739e-4b0d-959c-07ca11415331)
 
 Source:
 
@@ -318,11 +318,11 @@ username=admin
 password=' OR 1=1;--
 ```
 
-![image](https://hackmd.io/_uploads/ry2oA--w1l.png)
+![Screenshot 2025-01-12 164314](https://github.com/user-attachments/assets/a43820f9-50e9-4573-a522-d65d09a745ae)
 
 After sucess login, go to `/feedback`:
 
-![image](https://hackmd.io/_uploads/BJaJyGbPyl.png)
+![Screenshot 2025-01-12 164330](https://github.com/user-attachments/assets/1684e6cb-aa17-4a2b-81d3-2dd6719ab5a2)
 
 Source again:
 
@@ -397,7 +397,7 @@ Payload time:
 123"; echo fread(popen('cat flag.txt', 'r'), 4096);#
 ```
 
-![image](https://hackmd.io/_uploads/HJW9ez-wyl.png)
+![Screenshot 2025-01-12 165101](https://github.com/user-attachments/assets/f3757116-c862-4519-8c9d-821ed4aabc9f)
 
 ### Flag: 
 `
@@ -406,7 +406,7 @@ VSL{12e844403b1fb9c5b6705d8dd8823e4a}
 
 ## Web 5: Html to pdf:
 
-![image](https://hackmd.io/_uploads/SyuQbGbPkx.png)
+![Screenshot 2025-01-12 165349](https://github.com/user-attachments/assets/09a4c721-cebc-4b97-bf25-6fe7daf71daf)
 
 Hint: `reportlab==3.6.12`
 
@@ -422,11 +422,11 @@ Copy the malicious html and create a html file:
 
 Upload this html:
 
-![image](https://hackmd.io/_uploads/rytiffZv1l.png)
+![Screenshot 2025-01-12 165958](https://github.com/user-attachments/assets/1913be16-51ae-4c45-a9ed-ee83005b0fbb)
 
 Access /static/test.txt to get flag:
 
-![image](https://hackmd.io/_uploads/BkfCzMWv1l.png)
+![Screenshot 2025-01-12 170055](https://github.com/user-attachments/assets/0d60adc1-9fbb-4e12-ab0a-05e16181a04c)
 
 ### FLag: 
 `
@@ -435,11 +435,11 @@ VSL{67786e838bcf22c75b7f2d68b0e9915b}
 
 ## Web 7: Break the limit:
 
-![Screenshot 2025-01-12 160427](https://hackmd.io/_uploads/BJnRmMZvyx.png)
+![Screenshot 2025-01-12 160420](https://github.com/user-attachments/assets/1dd743e1-a7ae-44e0-84c9-5a027fc82dfc)
 
 It is the first `first solve` of me, although it isn't intended way. 
 
-![Screenshot 2025-01-12 160420](https://hackmd.io/_uploads/S1ykNGZDJg.png)
+![Screenshot 2025-01-12 160427](https://github.com/user-attachments/assets/af01224f-ca16-40df-b98f-9fed5197d5a0)
 
 I suffered from very long source, but i notice a part in `profile.php`:
 
@@ -457,19 +457,19 @@ No filter, file end with `.txt`. With that, i know what i do now :v
 
 Firstly, register a account:
 
-![Screenshot 2025-01-12 172003](https://hackmd.io/_uploads/rkEUPMWDyx.png)
+![Screenshot 2025-01-12 172003](https://github.com/user-attachments/assets/0aafafd1-f161-427f-a961-a8e35781cca2)
 
 Then login:
 
-![image](https://hackmd.io/_uploads/rk3vvfZwJe.png)
+![Screenshot 2025-01-12 172027](https://github.com/user-attachments/assets/7e08feea-eec6-4086-ae91-e6c2af25030f)
 
 A bunch of error here, but i just ignore these:
 
-![image](https://hackmd.io/_uploads/rJudwz-vyg.png)
+![Screenshot 2025-01-12 172045](https://github.com/user-attachments/assets/d2ce98ac-bee9-4817-8b42-a84a56fec591)
 
 Refresh, then:
 
-![image](https://hackmd.io/_uploads/HkiavMbD1g.png)
+![Screenshot 2025-01-12 172149](https://github.com/user-attachments/assets/b774372a-d83b-4d0f-b3c8-83bfcb628645)
 
 ### Flag: 
 `
