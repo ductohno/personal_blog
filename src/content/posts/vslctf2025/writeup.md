@@ -410,7 +410,7 @@ VSL{12e844403b1fb9c5b6705d8dd8823e4a}
 
 Hint: `reportlab==3.6.12`
 
-With that hint, i found [this]https://github.com/c53elyas/CVE-2023-33733/tree/master
+With that hint, i found [this](https://github.com/c53elyas/CVE-2023-33733/tree/master)
 
 Copy the malicious html and create a html file:
 
