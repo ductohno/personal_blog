@@ -21,11 +21,11 @@ I made a new note taking app using Supabase! Its so secure, I put my flag as the
 ### 2. Phân tích
 Vì là 1 bài blackbox nên ta phải xem trước hết là web có gì đã
 
-<img src="image/showcase_note.png" width="1200px">
+<img src="https://raw.githubusercontent.com/ductohno/personal_blog/refs/heads/main/src/content/posts/imaginaryctf2025/image/showcase_note.png" width="1200px">
 
 Nhìn vào thì ta thấy rằng đây chỉ đơn giản là 1 web cho phép ta add note thôi chứ cũng không có gì mà khai thác cả. Tuy nhiên, nhìn vào request thì ta sẽ thấy điều đặc biệt
 
-<img src="image/vuln_note.png" width="1200px">
+<img src="https://raw.githubusercontent.com/ductohno/personal_blog/refs/heads/main/src/content/posts/imaginaryctf2025/image/vuln_note.png" width="1200px">
 
 Mọi người có thể dễ dàng nhận ra ở phần path của request có nhận những param tạo thành 1 câu lệnh truy vấn sql hoàn chỉnh
 
@@ -57,7 +57,7 @@ https://eth007.me/cert/
 ### 2. Phân tích
 Tiếp tục là 1 bài blackbox, ta lại phải xem web có những gì đặc biệt không
 
-<img src="image/showcase_cert.png" width="1200px">
+<img src="https://raw.githubusercontent.com/ductohno/personal_blog/refs/heads/main/src/content/posts/imaginaryctf2025/image/showcase_cert.png" width="1200px">
 
 Ta có thể điều chỉnh name, title, print hoặc download. Mình cũng thử qua các tính năng rồi, cũng không có gì quá đặc sắc. Ta thử mở devtool lên xem sao.
 
@@ -187,7 +187,7 @@ http://codenames-1.chal.imaginaryctf.org/ (bot does not work on this instance, l
 ### 2. Phân tích
 Với bài này, ta sẽ được chơi 1 tựa game lật chữ
 
-<img src="image/showcase_codename.png" width="1200px">
+<img src="https://raw.githubusercontent.com/ductohno/personal_blog/refs/heads/main/src/content/posts/imaginaryctf2025/image/showcase_codename.png" width="1200px">
 
 Lưu ý là bài này có 2 flag, và ở phần 1 ta chỉ tập trung lấy flag đầu tiên, là ở `/flag.txt`
 
@@ -270,11 +270,11 @@ Biến `language` được lấy từ form của request `POST` của endpoint `
 
 Thực hiện request như sau
 
-<img src="image/exploit_codename1.png" width="1200px">
+<img src="https://raw.githubusercontent.com/ductohno/personal_blog/refs/heads/main/src/content/posts/imaginaryctf2025/image/exploit_codename1.png" width="1200px">
 
 Và ta có màn jumpscare
 
-<img src="image/flag_codename1.png" width="1200px">
+<img src="https://raw.githubusercontent.com/ductohno/personal_blog/refs/heads/main/src/content/posts/imaginaryctf2025/image/flag_codename1.png" width="1200px">
 
 ### 4. Flag
 `ictf{common_os_path_join_L_b19d35ca}`
@@ -582,11 +582,11 @@ Khi mà request được accept, thì nó sẽ check method, bắt buộc phải
 
 Bài này trong giải tôi không có hướng, vì ngôn ngữ lạ quá. Sau giải, tôi hóng được có người bảo rằng
 
-<img src="image/idea_pearl.jpg" width="1200px">
+<img src="https://raw.githubusercontent.com/ductohno/personal_blog/refs/heads/main/src/content/posts/imaginaryctf2025/image/idea_pearl.jpg" width="1200px">
 
 Thế là tôi áp dụng ngay, payload: `http://pearl.chal.imaginaryctf.org/%0als%20-la%7C/`
 
-<img src="image/testexploit_pearl.png" width="1200px">
+<img src="https://raw.githubusercontent.com/ductohno/personal_blog/refs/heads/main/src/content/posts/imaginaryctf2025/image/testexploit_pearl.png" width="1200px">
 
 Nó thật sự hoạt động. Vậy phần còn lại thì dễ rồi
 
@@ -962,17 +962,17 @@ Ta thấy rằng bot sẽ ghé qua endpoint `/game/<code>`, nơi mà ta có th�
 
 Trước hết thì ta sẽ xss kiểu gì. Hãy thử đặt 1 username tên là `kou.txt` còn password thì tùy. Sau đó, thực hiện thay đổi ngôn ngữ thành như ảnh sau
 
-<img src="image/changela_codename2.png" width="1200px">
+<img src="https://raw.githubusercontent.com/ductohno/personal_blog/refs/heads/main/src/content/posts/imaginaryctf2025/image/changela_codename2.png" width="1200px">
 
 Thì ta được kết quả như sau
 
-<img src="image/testpath_codename2.png" width="1200px">
+<img src="https://raw.githubusercontent.com/ductohno/personal_blog/refs/heads/main/src/content/posts/imaginaryctf2025/image/testpath_codename2.png" width="1200px">
 
 Ta nhận ra rằng, mình có thể thao túng giá trị của 1 cell bằng cách đặt username là `<thứ mình muốn hiển thị>.txt`, sau đó chọn ngôn ngữ là `/app/profiles/<thứ mình muốn hiển thị>` và join game để nó hiển thị ra màn hình.
 
 Đã có kết luận trên rồi, hãy thử với 1 payload xss xem, payload là ```<img src=0 onerror='eval(atob(`YWxlcnQoMSk=`))'>```
 
-<img src="image/testxss_codename2.png" width="1200px">
+<img src="https://raw.githubusercontent.com/ductohno/personal_blog/refs/heads/main/src/content/posts/imaginaryctf2025/image/testxss_codename2.png" width="1200px">
 
 Bây giờ ta sẽ craft đoạn mã js tự động gửi đáp án khi tôi ghé vào, ở đây tôi sẽ chạy đoạn mã js sau để test (mọi người nên xài ```eval(atob(`<base 64 of the payload>`))``` )
 
@@ -982,7 +982,7 @@ c=io("/",{query:{code:code}});c.on("connect",()=>c.emit("join"));c.on("start_gam
 
 Và kết quả trả về là
 
-<img src="image/jstest_codename2.png" width="1200px">
+<img src="https://raw.githubusercontent.com/ductohno/personal_blog/refs/heads/main/src/content/posts/imaginaryctf2025/image/jstest_codename2.png" width="1200px">
 
 Đoạn mã trên sẽ vừa khiến cho `clue_giver` phải gửi toàn bộ bảng màu của phòng, mà còn khiến ta có thể tăng số lượt chơi trên lên 100. Tại sao phải lòng vòng như thế, đó là bởi vì server sẽ bị 500 nếu ta đặt tên quá dài. 
 
@@ -998,7 +998,7 @@ Chúng ta lắp ráp lại mọi thứ đã phân tích thôi
 - Bước 3: Vô phòng, xong đó add bot
 - Bước 4: Ở WebSocket history trên burp suite, sẽ có response trả về leak toàn bộ thông tin về game. Nếu bạn phe đỏ thì chọn tất cả các cái màu đỏ và ngược lại và lụm flag
 
-<img src="image/flag_codename2.png" width="1200px">
+<img src="https://raw.githubusercontent.com/ductohno/personal_blog/refs/heads/main/src/content/posts/imaginaryctf2025/image/flag_codename2.png" width="1200px">
 
 Mình test trên codename1 nên nó ko có flag :(
 
