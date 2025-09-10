@@ -16,7 +16,7 @@ export const siteConfig: SiteConfig = {
   },
   banner: {
     enable: true,
-    src: 'assets/images/cherry_blossom.png',   // Relative to the /src directory. Relative to the /public directory if it starts with '/'
+    src: 'assets/images/cherry_blossom.gif',   // Relative to the /src directory. Relative to the /public directory if it starts with '/'
     position: 'bottom',      // Equivalent to object-position, only supports 'top', 'center', 'bottom'. 'center' by default
     credit: {
       enable: false,         // Display the credit text of the banner image
